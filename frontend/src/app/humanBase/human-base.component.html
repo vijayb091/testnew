@@ -1,0 +1,294 @@
+<!-- <app-dashboard-strips>
+</app-dashboard-strips> -->
+<div class="container-fluid">
+  <div class="row" style="padding-top: 30px;padding-bottom:30px;">
+    <!-- <div class="col-1"></div> -->
+    <div class="col-xl-2 col-lg-2 col-sm-6 col-xs-6">
+      <app-card [property]="customeri"></app-card>
+
+    </div>
+    <div class="col-xl-2 col-lg-2 col-sm-6 col-xs-6">
+      <app-card [property]="prospect"></app-card>
+
+    </div>
+    <div class="col-xl-3 col-lg-3 col-sm-6 col-xs-6">
+      <app-card [property]="upload"></app-card>
+
+    </div>
+    <div class="col-xl-3 col-lg-3 col-sm-6 col-xs-6">
+      <app-card [property]="grouppi"></app-card>
+
+    </div>
+    <div class="col-xl-2 col-lg-2 col-sm-6 col-xs-6">
+      <app-card [property]="detail"></app-card>
+    
+    </div>
+    <!-- <div class="col-1"></div> -->
+  </div>
+</div>
+<div class="row" style="margin-left: 36px">
+  <div class="col-xs-6 col-sm-4">
+    <label class="control control-solid control-solid-primary control--checkbox">All
+      <input type="checkbox" checked="checked" />
+      <span class="control__indicator" style="background: rgb(103, 73, 158)"></span>
+    </label>
+  </div>
+  <div class="col-xs-6 col-sm-4">
+    <label class="control control-solid  control--checkbox">Clienti
+      <input type="checkbox" checked="checked" />
+      <span class="control__indicator" style="background: rgb(144, 160, 183)"></span>
+    </label>
+  </div>
+  <div class="col-xs-6 col-sm-4">
+    <label class="control control-solid control-solid-primary control--checkbox">Prospect
+      <input type="checkbox" checked="checked" />
+      <span class="control__indicator" style="background: rgb(144, 160, 183)"></span>
+    </label>
+  </div>
+
+</div>
+<div class="row" style="margin-left: 36px">
+  <div class="col-xs-6 col-sm-4">
+    <label class="control control-solid control-solid-primary control--checkbox">Candidate Advisors
+      <input type="checkbox" checked="checked" />
+      <span class="control__indicator" style="background: rgb(144, 160, 183)"></span>
+    </label>
+  </div>
+  <div class="col-xs-6 col-sm-4">
+    <label class="control control-solid control-solid-primary control--checkbox">Candidate Bankers
+      <input type="checkbox" checked="checked" />
+      <span class="control__indicator" style="background: rgb(144, 160, 183)"></span>
+    </label>
+  </div>
+  <div class="col-xs-6 col-sm-4">
+    <label class="control control-solid control-solid-primary control--checkbox">Cointestatari
+      <input type="checkbox" checked="checked" />
+      <span class="control__indicator" style="background: rgb(144, 160, 183)"></span>
+    </label>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-2 offset-md-10 search-bar">
+    <i class="fa fa-search" aria-hidden="true"></i>
+    <input type="text" placeholder="Type and hit Enter" style="border: rgb(255, 255, 255)">
+  </div>
+  <div class=" col-sm-12">
+    <div class="card-shadow mb-4">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Professionate</th>
+            <th scope="col">Anagrafica</th>
+            <th scope="col">Stile comportamentale</th>
+            <th scope="col">Stile di Vita</th>
+            <th scope="col">Patrimoniale</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Alessio</th>
+            <td>
+              <div class="progress" style="height: 40px;">
+                <div class="progress-bar  " role="progressbar" style="width: 75%; background: rgb(16, 157, 89)" aria-valuenow="25" aria-valuemin="0"
+                  aria-valuemax="100"></div>
+              </div>
+            </td>
+            <td>
+              <div class="progress" style="height: 40px;">
+                <div class="progress-bar  " role="progressbar" style="width: 45%;background: rgb(16, 157, 89)" aria-valuenow="25" aria-valuemin="0"
+                  aria-valuemax="100"></div>
+              </div>
+            </td>
+            <td>
+              <div class="progress" style="height: 40px;">
+                <div class="progress-bar  " role="progressbar" style="width: 35%;background: rgb(16, 157, 89)" aria-valuenow="25" aria-valuemin="0"
+                  aria-valuemax="100"></div>
+              </div>
+            </td>
+            <td>
+              <div class="progress" style="height: 40px;">
+                <div class="progress-bar  " role="progressbar" style="width: 15%;background: rgb(16, 157, 89)" aria-valuenow="25" aria-valuemin="0"
+                  aria-valuemax="100"></div>
+              </div>
+            </td>
+            <td>
+              <div class="progress" style="height: 40px;">
+                <div class="progress-bar  " role="progressbar" style="width: 55%;background: rgb(16, 157, 89)" aria-valuenow="25" aria-valuemin="0"
+                  aria-valuemax="100"></div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Valentina</th>
+            <td>
+              <div class="progress" style="height: 40px;">
+                <div class="progress-bar" role="progressbar" style="width: 85%; background: rgb(219, 71, 61)" aria-valuenow="25" aria-valuemin="0"
+                  aria-valuemax="100"></div>
+              </div>
+            </td>
+            <td>
+              <div class="progress" style="height: 40px;">
+                <div class="progress-bar " role="progressbar" style="width: 95%; background: rgb(219, 71, 61)" aria-valuenow="25" aria-valuemin="0"
+                  aria-valuemax="100"></div>
+              </div>
+            </td>
+            <td>
+              <div class="progress" style="height: 40px;">
+                <div class="progress-bar " role="progressbar" style="width: 15%; background: rgb(219, 71, 61)" aria-valuenow="25" aria-valuemin="0"
+                  aria-valuemax="100"></div>
+              </div>
+            </td>
+            <td>
+              <div class="progress" style="height: 40px;">
+                <div class="progress-bar  " role="progressbar" style="width: 35%; background: rgb(219, 71, 61)" aria-valuenow="25" aria-valuemin="0"
+                  aria-valuemax="100"></div>
+              </div>
+            </td>
+            <td>
+              <div class="progress" style="height: 40px;">
+                <div class="progress-bar  " role="progressbar" style="width: 55%;background: rgb(219, 71, 61)" aria-valuenow="25" aria-valuemin="0"
+                  aria-valuemax="100"></div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Guido</th>
+            <td>
+              <div class="progress" style="height: 40px;">
+                <div class="progress-bar  " role="progressbar" style="width: 5%;background: rgb(16, 157, 89)" aria-valuenow="25" aria-valuemin="0"
+                  aria-valuemax="100"></div>
+              </div>
+            </td>
+            <td>
+              <div class="progress" style="height: 40px;">
+                <div class="progress-bar  " role="progressbar" style="width: 75%;background: rgb(16, 157, 89)" aria-valuenow="25" aria-valuemin="0"
+                  aria-valuemax="100"></div>
+              </div>
+            </td>
+            <td>
+              <div class="progress" style="height: 40px;">
+                <div class="progress-bar  " role="progressbar" style="width: 55%;background: rgb(16, 157, 89)" aria-valuenow="25" aria-valuemin="0"
+                  aria-valuemax="100"></div>
+              </div>
+            </td>
+            <td>
+              <div class="progress" style="height: 40px;">
+                <div class="progress-bar  " role="progressbar" style="width: 45%;background: rgb(16, 157, 89)" aria-valuenow="25" aria-valuemin="0"
+                  aria-valuemax="100"></div>
+              </div>
+            </td>
+            <td>
+              <div class="progress" style="height: 40px;">
+                <div class="progress-bar  " role="progressbar" style="width: 35%;background: rgb(16, 157, 89)" aria-valuenow="25" aria-valuemin="0"
+                  aria-valuemax="100"></div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Roberto</th>
+            <td>
+              <div class="progress" style="height: 40px;">
+                <div class="progress-bar  " role="progressbar" style="width: 15%;background: rgb(219, 71, 61)" aria-valuenow="25" aria-valuemin="0"
+                  aria-valuemax="100"></div>
+              </div>
+            </td>
+            <td>
+              <div class="progress" style="height: 40px;">
+                <div class="progress-bar  " role="progressbar" style="width: 95%;background: rgb(219, 71, 61)" aria-valuenow="25" aria-valuemin="0"
+                  aria-valuemax="100"></div>
+              </div>
+            </td>
+            <td>
+              <div class="progress" style="height: 40px;">
+                <div class="progress-bar  " role="progressbar" style="width: 85%;background: rgb(219, 71, 61)" aria-valuenow="25" aria-valuemin="0"
+                  aria-valuemax="100"></div>
+              </div>
+            </td>
+            <td>
+              <div class="progress" style="height: 40px;">
+                <div class="progress-bar  " role="progressbar" style="width: 35%;background: rgb(219, 71, 61)" aria-valuenow="25" aria-valuemin="0"
+                  aria-valuemax="100"></div>
+              </div>
+            </td>
+            <td>
+              <div class="progress" style="height: 40px;">
+                <div class="progress-bar  " role="progressbar" style="width: 45%;background: rgb(219, 71, 61)" aria-valuenow="25" aria-valuemin="0"
+                  aria-valuemax="100"></div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Danilo</th>
+            <td>
+              <div class="progress" style="height: 40px;">
+                <div class="progress-bar  " role="progressbar" style="width: 25%;background: rgb(16, 157, 89)" aria-valuenow="25" aria-valuemin="0"
+                  aria-valuemax="100"></div>
+              </div>
+            </td>
+            <td>
+              <div class="progress" style="height: 40px;">
+                <div class="progress-bar  " role="progressbar" style="width: 95%;background: rgb(16, 157, 89)" aria-valuenow="25" aria-valuemin="0"
+                  aria-valuemax="100"></div>
+              </div>
+            </td>
+            <td>
+              <div class="progress" style="height: 40px;">
+                <div class="progress-bar  " role="progressbar" style="width: 75%;background: rgb(16, 157, 89)" aria-valuenow="25" aria-valuemin="0"
+                  aria-valuemax="100"></div>
+              </div>
+            </td>
+            <td>
+              <div class="progress" style="height: 40px;">
+                <div class="progress-bar  " role="progressbar" style="width: 5%;background: rgb(16, 157, 89)" aria-valuenow="25" aria-valuemin="0"
+                  aria-valuemax="100"></div>
+              </div>
+            </td>
+            <td>
+              <div class="progress" style="height: 40px;">
+                <div class="progress-bar  " role="progressbar" style="width: 65%;background: rgb(16, 157, 89)" aria-valuenow="25" aria-valuemin="0"
+                  aria-valuemax="100"></div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Gianni</th>
+            <td>
+              <div class="progress" style="height: 40px;">
+                <div class="progress-bar  " role="progressbar" style="width: 45%;background: rgb(219, 71, 61)" aria-valuenow="25" aria-valuemin="0"
+                  aria-valuemax="100"></div>
+              </div>
+            </td>
+            <td>
+              <div class="progress" style="height: 40px;">
+                <div class="progress-bar  " role="progressbar" style="width: 25%;background: rgb(219, 71, 61)" aria-valuenow="25" aria-valuemin="0"
+                  aria-valuemax="100"></div>
+              </div>
+            </td>
+            <td>
+              <div class="progress" style="height: 40px;">
+                <div class="progress-bar  " role="progressbar" style="width: 35%;background: rgb(219, 71, 61)" aria-valuenow="25" aria-valuemin="0"
+                  aria-valuemax="100"></div>
+              </div>
+            </td>
+            <td>
+              <div class="progress" style="height: 40px;">
+                <div class="progress-bar  " role="progressbar" style="width: 75%;background: rgb(219, 71, 61)" aria-valuenow="25" aria-valuemin="0"
+                  aria-valuemax="100"></div>
+              </div>
+            </td>
+            <td>
+              <div class="progress" style="height: 40px;">
+                <div class="progress-bar  " role="progressbar" style="width: 65%;background: rgb(219, 71, 61)" aria-valuenow="25" aria-valuemin="0"
+                  aria-valuemax="100"></div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+    </div>
+  </div>
+</div>

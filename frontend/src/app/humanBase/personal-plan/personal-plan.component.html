@@ -1,0 +1,27 @@
+<div class="container">
+  <div style="padding: 150px;     width: 1207px;">
+      <kendo-grid 
+      [data]="view | async"
+      [pageSize]="pageSize"
+      [skip]="skip"
+      [sortable]="true"
+      [sort]="sort"
+      [pageable]="true"
+      [height]="550"
+      (dataStateChange)="dataStateChange($event)"
+    >
+    <kendo-grid-column field="customer" width="100" title="Name"></kendo-grid-column>
+    <kendo-grid-column field="gender" width="150" title="Gender"></kendo-grid-column>
+    <kendo-grid-column field="dateOfBirth" width="150" title="Date of birth"></kendo-grid-column>
+    <kendo-grid-column field="age" [sortable]="false" title="Age"> </kendo-grid-column>
+    <kendo-grid-column field="cityOfBirth" width="150" title="City of birth"></kendo-grid-column>
+    <kendo-grid-column field="residentialAddress" width="150" title="Addresss"></kendo-grid-column>
+    <kendo-grid-column field="domicileZipCode" width="150" title="zip code"></kendo-grid-column>
+
+    <div *kendoGridDetailTemplate="let dataItem">
+      
+        <app-category-details [category]="dataItem"></app-category-details>
+    </div>
+  </kendo-grid>
+  </div>
+</div>

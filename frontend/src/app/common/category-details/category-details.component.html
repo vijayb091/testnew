@@ -1,0 +1,62 @@
+
+      <kendo-tabstrip (tabSelect)="onTabSelect($event)">
+        <kendo-tabstrip-tab [title]="'Bank Detail'" [selected]="true">
+          <ng-template kendoTabContent>
+                <kendo-grid
+                [data]="view | async"
+                [loading]="view.loading"
+                [pageSize]="6"
+                [skip]="skip"
+                [pageable]="true"
+                [scrollable]="'none'"
+                (pageChange)="pageChange($event)"
+                >
+                <kendo-grid-column field="bankid[0].fidelizationPlanName" title="Plan" width="50">
+                </kendo-grid-column>
+                <kendo-grid-column field="bankid[0].dateOfJoin" title="Date Of Birth" width="50">
+                </kendo-grid-column>
+                <kendo-grid-column field="bankid[0].complianceToPlan" title="Complience Plan" width="60" format="{0:c}">
+                </kendo-grid-column>
+                </kendo-grid>
+          </ng-template>
+        </kendo-tabstrip-tab>
+        <kendo-tabstrip-tab [title]="'Contact'">
+          <ng-template kendoTabContent>
+                <kendo-grid
+                [data]="view | async"
+                [loading]="view.loading"
+                [pageSize]="6"
+                [skip]="skip"
+                [pageable]="true"
+                [scrollable]="'none'"
+                (pageChange)="pageChange($event)"
+                >
+                <kendo-grid-column field="contact[0].email" title="Email" width="50">
+                </kendo-grid-column>
+                <kendo-grid-column field="contact[0].mobile" title="Mobile" width="50">
+                </kendo-grid-column>
+               
+                </kendo-grid>
+          </ng-template>
+        </kendo-tabstrip-tab>
+        <kendo-tabstrip-tab [title]="'Family'">
+          <ng-template kendoTabContent>
+                <kendo-grid
+                [data]="view | async"
+                [loading]="view.loading"
+                [pageSize]="6"
+                [skip]="skip"
+                [pageable]="true"
+                [scrollable]="'none'"
+                (pageChange)="pageChange($event)"
+                >
+                <kendo-grid-column field="family[0].name" title="Name" width="50">
+                </kendo-grid-column>
+                <kendo-grid-column field="family[0].parentalRelationship" title="relation" width="50">
+                </kendo-grid-column>
+               
+                </kendo-grid>
+          </ng-template>
+        </kendo-tabstrip-tab>
+       
+      </kendo-tabstrip>

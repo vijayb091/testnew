@@ -1,0 +1,10 @@
+.humanbasemanagerSearch{
+    position: absolute;
+    right: 0;
+    margin-right: 38px;
+}
+
+.manager-card{
+  height: 100px;
+  width: 150px;
+}

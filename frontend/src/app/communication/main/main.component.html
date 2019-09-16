@@ -1,0 +1,117 @@
+<mat-drawer-container class="drawer-container" autosize>
+  <mat-drawer
+    #drawer
+    opened
+    mode="side"
+    fxLayout="column"
+    fxFlex="235px"
+    fxFlex.xs="235px"
+    fxFlex.sm="235px"
+    fxFlex.md="235px">
+    <!-- TODO: sidebar first block -->
+    <div class="side-menu" fxFlex="100" fxLayoutAlign="start center">
+      <div class="sidebar-icon" fxLayout="column" fxLayoutAlign="space-evenly">
+        <button type="button" name="button" (click)="onClickFullScreen()">
+          <i class="fa fa-window-maximize" aria-hidden="true"></i>
+        </button>
+        <button type="button" name="button" (click)="drawer.toggle();showMenu()">
+          <i class="fa fa-bars"></i>
+        </button>
+        <button type="button" name="button" mat-icon-button [matMenuTriggerFor]="appMenu">
+          <i class="fa fa-cog"></i>
+        </button>
+        <button type="button" name="button" routerLinkActive="active" routerLink="./user-information">
+          <i class="fa fa-edit"></i>
+        </button>
+        <button type="button" name="button">
+          <i class="fa fa-sign-out-alt"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- TODO: first swiper -->
+    <div class="side-menu" fxFlex="80">
+      <div id="swiper-second" fxFlex="100">
+        <div class="firstYearSwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide" *ngFor="let year of firstYearArray;" (click)="clickOnYear()">
+              {{ year }}
+            </div>
+          </div>
+          <div class="swiper-button-next swiper-button-white"></div>
+          <div class="swiper-button-prev swiper-button-white"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TODO: clock swiper -->
+    <div class="side-menu" fxFlex="80">
+      <div id="swiper-second" fxFlex="100">
+        <div class="clockSwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="../../../assets/images/icon.png" alt="" />
+            </div>
+          </div>
+          <div class="swiper-button-next swiper-button-white"></div>
+          <div class="swiper-button-prev swiper-button-white"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TODO: second swiper -->
+    <div class="side-menu" fxFlex="80">
+      <div id="swiper-second" fxFlex="100">
+        <div class="secondSwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide" *ngFor="let year of secondYearArray;">
+              {{ year }}
+            </div>
+          </div>
+          <div class="swiper-button-next swiper-button-white"></div>
+          <div class="swiper-button-prev swiper-button-white"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TODO: company swiper -->
+    <div class="side-menu" fxFlex="100" style="position:relative">
+      <div id="swiper-vertical">
+        <div class="companySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <p> Google </p>
+            </div>
+            <div class="swiper-slide">
+              <p> Apple </p>
+            </div>
+            <div class="swiper-slide">
+              <p> Microsoft </p>
+            </div>
+            <div class="swiper-slide">
+              <p> Facebook </p>
+            </div>
+            <div class="swiper-slide">
+              <p> Twitter </p>
+            </div>
+          </div>
+          <div class="swiper-button-next swiper-button-white"></div>
+          <div class="swiper-button-prev swiper-button-white"></div>
+        </div>
+      </div>
+    </div>
+  </mat-drawer>
+  <mat-drawer-content fxLayout="column" fxLayoutAlign="center" fxLayoutAlign.xs="start">
+    <button type="button" class="menu-show" mat-button *ngIf="isMenuShow" (click)="drawer.toggle(); hideMenu()">
+      <i class="fa fa-bars"></i>
+    </button>
+    <div class="side">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>
+
+<mat-menu #appMenu="matMenu">
+  <button style="font-size: 16px" mat-menu-item (click)="updatePersonalState()">Manage Personal</button>
+  <button style="font-size: 16px" mat-menu-item (click)="updateBusinessState()">Manage Business</button>
+</mat-menu>

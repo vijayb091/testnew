@@ -1,0 +1,196 @@
+mat-drawer
+  max-height: 100vh
+
+.drawer-container
+  width: 100%
+  height: 100%
+
+.mat-drawer-content
+  overflow: inherit
+
+.wrapper
+  width: 100%
+  height: 100%
+
+.side-menu
+  position: relative
+  height: 100%
+  border-right: 1px solid #111
+  &:nth-child(1)
+    background: url("../../../assets/img/user_profile.png")
+    background-position: 66% 42%
+    background-size: contain
+    background-repeat: no-repeat
+
+  &:nth-child(odd)
+    height: 26.66%
+    border-bottom: 1px solid #111
+    flex-basis: 26.66% !important
+  &:nth-child(even)
+    height: 10%
+    border-bottom: 1px solid #111
+    flex-basis: 10% !important
+
+.fas
+  font-size: 25px
+
+button
+  border: 0
+  color: #111
+  font-size: 25px
+  background: transparent
+  &:focus
+    outline: none
+
+.menu-show
+  position: absolute
+  top: -3px
+  left: 5px
+  z-index: 9
+  padding: 0
+  min-width: 30px
+
+.menu-button
+  display: inline-block
+  cursor: pointer
+  position: absolute
+  left: 5px
+  top: 5px
+  z-index: 4
+
+.sidebar
+  overflow: hidden
+  .menu-button
+    position: relative
+
+.swiper-container,
+.firstYearSwiper,
+.clockSwiper,
+.secondSwiper,
+.companySwiper
+  overflow: hidden
+  width: 100%
+  height: 100%
+  font-size: 1.36em
+
+.swiper-slide
+  width: 100%
+  text-align: center
+  /* Center slide text vertically */
+  display: -webkit-box
+  display: -ms-flexbox
+  display: -webkit-flex
+  display: flex
+  -webkit-box-pack: center
+  -ms-flex-pack: center
+  -webkit-justify-content: center
+  justify-content: center
+  -webkit-box-align: center
+  -ms-flex-align: center
+  -webkit-align-items: center
+  align-items: center
+
+.side-menu
+  position: relative
+  p
+    position: absolute
+    margin: auto
+    width: 100% !important
+    font-size: 1.36em
+    line-height: 1.36em
+    text-align: center
+    font-weight: 100
+    height: 35%
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+  .sidebar-icon
+    max-height: 100%
+    button, .fa
+      font-size: 3.125vh
+#swiper-second
+  height: 100%
+  .swiper-slide
+    img
+      background-position: bottom center
+      background-size: contain
+      background-repeat: no-repeat
+
+#swiper-vertical
+  height: 100%
+  .companySwiper
+    width: 100%
+    position: absolute
+    .swiper-slide
+      height: 100%
+      img
+        display: none
+      p
+        position: absolute
+        margin: auto
+        width: 100%
+        height: 17%
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+    .swiper-button-prev.swiper-button-white,
+    .swiper-container-rtl .swiper-button-next.swiper-button-white,
+    .swiper-button-next.swiper-button-white,
+    .swiper-container-rtl .swiper-button-prev.swiper-button-white
+      transform: rotate(90deg)
+      position: absolute
+    .swiper-button-prev
+      left: 50%
+      margin-left: -12px
+      top: 30px
+    .swiper-button-next
+      top: 85%
+      right: 50%
+      margin-right: -14px
+
+.swiper-button-prev.swiper-button-white,
+.swiper-container-rtl .swiper-button-next.swiper-button-white
+  background-image: url("../../../assets/img/prev.png") !important
+  &:focus
+    outline: none
+
+.swiper-button-next.swiper-button-white,
+.swiper-container-rtl .swiper-button-prev.swiper-button-white
+  background-image: url("../../../assets/img/next.png") !important
+  &:focus
+    outline: none
+
+.sidebar
+  .menu-button
+    left: 0
+    top: 0
+
+.content
+  width: calc(100% - 235px) !important
+
+.button-bottom-space
+  margin-bottom: 80%
+
+#swiper-second img
+  width: 33%
+
+@media (max-width: 768px)
+  .button-bottom-space
+    margin-bottom: 50%
+  .mat-drawer-content
+    margin-left: 0% !important
+
+  .side-menu
+    h2
+      height: 45% !important
+
+@media (max-width: 375px)
+  .sidebar
+    width: 235px
+
+@media (max-width: 320px)
+  .sidebar
+    width: 235px
+

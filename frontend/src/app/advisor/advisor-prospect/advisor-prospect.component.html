@@ -1,0 +1,24 @@
+<div class="row align-items-center" style="margin-left: 36px">
+  <div class="col-xl-auto col-lg-auto col-sm-4 col-xs-6" *ngFor="let filter of filters">
+    <label class="control control-solid control-solid-primary control--checkbox">
+      <p style="padding-top: 0.25rem;">{{filter.name}}</p>
+      <input type="checkbox" checked="checked" />
+      <span class="control__indicator checkbox-color"></span>
+    </label>
+  </div>
+</div>
+<div class="div-pad">
+  <div class="row align-items-center">
+    <div class="col-12 col-xl-6 col-lg-6 col-sm-12 col-xs-12">
+      <kendo-chart>
+        <kendo-chart-series>
+          <kendo-chart-series-item type="column" [data]="[5, 35, 10, 55]">
+          </kendo-chart-series-item>
+        </kendo-chart-series>
+      </kendo-chart>
+    </div>
+    <div class="col-12 col-xl-6 col-lg-6 col-sm-12 col-xs-12">
+      <img src="assets/images/graph.png" />
+    </div>
+  </div>
+</div>

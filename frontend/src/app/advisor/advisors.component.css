@@ -1,0 +1,16 @@
+.smallboxtext {
+    width: 23px;
+    height: 31px;
+    color: #1c1a1a;
+    font-family: Poppins;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 17px;
+    /* Text style for "1" */
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    /* Text style for "day" */
+    font-family: "Poppins Medium";
+    font-weight: 500;
+}

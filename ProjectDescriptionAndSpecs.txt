@@ -1,0 +1,152 @@
+# Nulabs
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.1.
+
+# OLD REFERENCES TO LOOK AT
+	- Old Deep dynamic cv site: https://test-ff1e5.firebaseapp.com/user/dashboard
+	- Old Mansoor site: http://bidieyedev.nulabs.it/panel/profile
+
+# Project description
+Specs:
+	- AngularJS 6 framework
+	- 2 language support in JSON file: italian, english
+	- Software structure:
+		Web application:
+		Front-end:
+			- Angular 6
+			- custom css, scss depending on requirements
+			- look and feel:
+				Diverse HTML+CSS(http://preview.themeforest.net/item/diverse-responsive-dashboard-admin-ui-kits/full_screen_preview/21191867)
+				Can eventually also be used prior asking: 
+					Kendo UI for angular(https://www.telerik.com/kendo-angular-ui/)
+					AngularMaterial
+			- Responsive and mobile ready(components will be reused for ionic or PWA app)
+			- firebase authentication 
+		Back-end:
+			- nodejs + expressjs on docker container
+			- mongodb on docker container(sharding to be considered)
+		DB:
+			- Database is splitted in 2: client side fields + central mongodb. This separation is done because some of the fields will be visible only on client side; 
+     		For example part of the data on a page,, will be decrypted by client and merged with data on server(mongo). 
+			- client side for sensible data(everything that can identify the user) in realtime of even keeping the data on the browser with indexDb
+			- MongoDB for all the rest of non sensible data: local for development env and googleClloudEngine for production
+			- db structure will be discussed with customer and will be given in excel format
+		Mobile app:
+			- Ionic 3+ or PWA application:
+			- Will communicate with web application and share same data
+			- Will use customized web app components
+		In the future:
+			- GCP services for:
+				machine learning, 
+				voice recognition,
+				kubernetes as docker orchestrator
+Description of the complete project:
+Customer target:
+	- Financial advisors: consultants that manage money of end customers to make them invest correctly and make them earn money
+	- Financial advisor managers(advisor boss): consultants that are themself advisors but also have a team of other advisors working for them.
+Packages part of the overall project:
+	- HumanBase: a database of advisors, end-customers, managers, prospects, candidates. 
+	- Advisor: an application that helps financial advisors to analyze financial wallet data of end-customers and highlights potential other things to be sold and gives advices on potencial lacks
+	- Manager: an application that helps recruiting other advisors and have a way of having control on what advisors are doing
+	- Communication: a package to better let advisors present themself to end customers with, for example, a Curriculum Vitae they can implement by their own.
+
+The idea is to provide a tool to accomplish the following goals:
+	- Give advisors the way to better organize their customers database. -- HumanBase package
+	- Give the advisors a way of getting to know better their customers: the majority of the advisors here in Italy don’t have the need and the idea of how to make end customers invest more money cause they already earn enough money on them; this means that efficiency is very low on end customers so could be enhanced a lot asking more questions and having more infos. 
+	Advisors will be guided by the app to remind them to make questions to end customers on next scheduled meetings(not all expected questions at once but some each meeting). -- HumanBase package.
+	- Give a better way to advisors to present themself to:
+		- other advisors when they perform recruiting work for their managers
+		- to the end-customers when they try to attract prospects
+	-- Communication package
+	- Give advisors a way of analyzing financial wallets of their end-customers -- Advisor package
+	- Give managers a way of keeping under control the work of their advisors and the state of recruitment of new ones -- Manager package
+	- Give advisors(when working for managers) a way of keep track of the process of hiring and tutoring new advisors -- Manager package
+	- Give managers, advisors, end-customers, prospects a way of communicating and one with the others and keep informations updated on the state of the job with reports, chat and more -- cross package mobile application
+
+User levels structure:
+	- Admin(Amministratore portale)
+		Level “A” managers(Managers di livello “A”)
+			Level “B” managers(Managers di livello “B”)
+			Advisors(Consulenti)
+			Candidates(Candidati)
+			Customers(Clienti)
+			Prospects(Prospect)
+		Level “B” managers(Managers di livello “B”)
+			Advisors(Consulenti)
+			Candidates(Candidati)
+			Customers(Clienti)
+			Prospects(Prospect)
+		Advisors(Consulenti)
+			Customers(Clienti)
+			Prospects(Prospects)
+		Candidates(Candidati)
+		Customers(Clienti)
+		Prospects(Prospects)
+
+Packages Structure: 
+HumanBase: 
+	- This package is the core of the complete project
+	    - Get to know you better GTKYB(Conoscersi meglio): HumanBase Cone!!
+            Admin will have a page where he can setup suggestions to the advisor on questions to ask to customer depending on time passed. 
+            There will be a cone splitted in 5 or more vertical levels. Each level corresponds to 10 questions and you cannot see all the subsequent questions if you didn’t answer to the previous ones.
+        - Organize data(Organizza dati): 
+            Based on the questions of the GTKYB, we will bind each question to a product
+            Financial products: page with a statistic on how many questions are answered referred to a certain product.
+        - Training center(Centro formazione): youtube video link to train the user
+        - Settings(Impostazioni)
+            Profile(Profilo utente)
+            Import profile data(Importa dati di profilo)
+
+BiDiEye.com for Advisor:
+    Clicking on one product you will have a grid of all the prospects or customers that answered to the questions compatible with the binded product. 
+    - Map module(Modulo Mappatura): this module contains the end-customer personal wallet
+    - Dynamic report(Report dinamico)
+    - Sales campaign(Campagna commerciale)
+    - Calendar(Calendario)
+    - Targeted actions(Azioni mirate)
+    - Recruiting program(Iter di reclutamento)
+        First meeting(Primo colloquio)
+        Focus meeting(Colloquio di focus)
+    - News and communications
+    - Kit(Kit)
+    - Contact module(Modulo contatto)
+    - Training center(Centro formazione): youtube video link to train the user
+    - Settings(Impostazioni)
+        Report export(Esportazione reportistica)
+
+BiDiEye for Managers:
+    - Map module(Modulo Mappatura): this module contains the end customer personal wallet
+    - Dynamic report(Report dinamico)
+    - Cockpit(Cruscotto):
+        Recruiting overview(Stato candidati): Running, ToBe, WhyNot
+        Candidates history(Storia candidati)
+    - Sales campaign(Campagna commerciale)
+    - Calendar(Calendario)
+    - Targeted actions(Azioni mirate)
+    - Recruiting program(Iter di reclutamento)
+        First meeting(Primo colloquio)
+        Focus meeting(Colloquio di focus)
+    - News and communications
+    - Kit(Kit)
+    - Contact module(Modulo contatto)    
+    - WishList(Lista dei desideri): financial products for advisors    
+    - Training center(Centro formazione): youtube video link to train the user
+    - Settings(Impostazioni)
+        Report export(Esportazione reportistica)
+
+BiDiEye for communication:
+    - Dynamic CV(CV Dinamico): 
+    - Create CV(Crea CV):
+        Personal life(Vita personale)
+        Business experiences(Esperienze lavorative)
+            Add, remove, modify items
+            Add image
+            Preview
+        Stock market(Azioni): select stocks to show
+        World events(Eventi dal mondo)
+    - Communication(Comunicazione)
+        Send business card: single or multiple from saved filter
+        Send notifications: single or multiple from saved filter
+    - Personal branding()
+    - Training center(Centro formazione): youtube video link to train the user
+    - Settings(Impostazioni)
